@@ -1,0 +1,429 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>MandapBook — No double-booked dates, ever.</title>
+  <meta name="description" content="Booking software for wedding and event vendors. Catch date collisions the moment a booking is entered, and track advance vs balance for every event. Rs 799/mo." />
+  <link rel="icon" href="favicon.svg" type="image/svg+xml" />
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <a class="skip-link" href="#main">Skip to content</a>
+
+  <!-- ===== NAV ===== -->
+  <header class="nav" id="top">
+    <div class="wrap nav__inner">
+      <a class="brand" href="#top" aria-label="MandapBook home">
+        <span class="brand__mark" aria-hidden="true">
+          <svg viewBox="0 0 40 40" width="28" height="28">
+            <path d="M6 17 L20 8 L34 17 Z" fill="currentColor"/>
+            <rect x="8.5" y="17" width="2.6" height="15" fill="currentColor"/>
+            <rect x="28.9" y="17" width="2.6" height="15" fill="currentColor"/>
+            <rect x="11" y="28" width="18" height="4" rx="1.5" fill="currentColor"/>
+          </svg>
+        </span>
+        <span class="brand__word">MandapBook</span>
+      </a>
+      <nav class="nav__links" aria-label="Primary">
+        <a href="#problem">The problem</a>
+        <a href="#how">How it works</a>
+        <a href="#features">Features</a>
+        <a href="#pricing">Pricing</a>
+      </nav>
+      <a href="#pricing" class="btn btn--sm">Start free trial</a>
+    </div>
+  </header>
+
+  <main id="main">
+
+    <!-- ===== 1. HERO ===== -->
+    <section class="hero">
+      <div class="wrap hero__grid">
+        <div class="hero__copy">
+          <p class="eyebrow">Booking book for wedding &amp; event vendors</p>
+          <h1 class="hero__title">No double-booked<br />dates, <span class="u-accent">ever.</span></h1>
+          <p class="hero__lede">
+            One date, two <em>baraats</em>. It has happened to every caterer and tent house at least once —
+            and it costs a reputation that took years to build. MandapBook flags the clash the second
+            you write the booking down.
+          </p>
+          <div class="hero__cta">
+            <a href="#pricing" class="btn btn--lg">Start free trial</a>
+            <a href="#how" class="btn btn--ghost btn--lg">See how it works</a>
+          </div>
+          <p class="hero__note">Rs 799/mo · Works on the phone you already have · Hindi &amp; English</p>
+        </div>
+
+        <!-- Signature: live collision tile -->
+        <aside class="hero__demo" aria-label="Date collision demo">
+          <div class="collide" id="collide">
+            <div class="collide__head">
+              <span class="collide__date">Sat, 12 Dec 2026</span>
+              <span class="collide__cap">Capacity: <strong>2 events/day</strong></span>
+            </div>
+            <ul class="collide__list">
+              <li class="bkg">
+                <span class="bkg__dot"></span>
+                <span class="bkg__name">Sharma–Iyer Wedding</span>
+                <span class="bkg__area">Kothrud</span>
+              </li>
+              <li class="bkg">
+                <span class="bkg__dot"></span>
+                <span class="bkg__name">Deshpande Reception</span>
+                <span class="bkg__area">Baner</span>
+              </li>
+              <li class="bkg bkg--new" id="bkgNew">
+                <span class="bkg__dot"></span>
+                <span class="bkg__name">Kulkarni Sangeet</span>
+                <span class="bkg__area">Aundh</span>
+              </li>
+            </ul>
+            <div class="collide__warn" id="collideWarn" role="status" aria-live="polite" hidden>
+              <span class="collide__warn-ic" aria-hidden="true">!</span>
+              <span><strong>Over capacity.</strong> 3 events on one date — you can serve 2. Fix before you say yes.</span>
+            </div>
+          </div>
+          <button class="collide__toggle" id="collideToggle" type="button">
+            Add a 3rd booking on this date
+          </button>
+        </aside>
+      </div>
+    </section>
+
+    <!-- ===== 2. THE PROBLEM ===== -->
+    <section class="section" id="problem">
+      <div class="wrap">
+        <p class="eyebrow eyebrow--center">The nightmare</p>
+        <h2 class="section__title center">Your booking system is a diary, a chat, and your memory.</h2>
+        <p class="section__lede center">
+          Caterers, tent houses, decorators and photographers run peak season on three things — and all
+          three fail at exactly the wrong moment.
+        </p>
+
+        <div class="pain">
+          <article class="pain__card">
+            <span class="pain__ic" aria-hidden="true">
+              <svg viewBox="0 0 24 24" width="26" height="26"><path d="M4 5h16v3H4zM4 11h16v8H4z" fill="none" stroke="currentColor" stroke-width="1.6"/><path d="M8 3v4M16 3v4" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/></svg>
+            </span>
+            <h3>The paper diary</h3>
+            <p>Two families ask for 12 December. You write both on different pages, three weeks apart. Nobody notices until the tent truck is loaded.</p>
+          </article>
+          <article class="pain__card">
+            <span class="pain__ic" aria-hidden="true">
+              <svg viewBox="0 0 24 24" width="26" height="26"><path d="M4 5h16v11H8l-4 4z" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linejoin="round"/></svg>
+            </span>
+            <h3>The WhatsApp trail</h3>
+            <p>The advance was confirmed in a chat that is now 400 messages deep. "Aapne kitna diya tha?" becomes an argument on the wedding morning.</p>
+          </article>
+          <article class="pain__card">
+            <span class="pain__ic" aria-hidden="true">
+              <svg viewBox="0 0 24 24" width="26" height="26"><path d="M12 3a9 9 0 1 0 9 9" fill="none" stroke="currentColor" stroke-width="1.6"/><path d="M12 7v5l3 2" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/></svg>
+            </span>
+            <h3>Your own memory</h3>
+            <p>You remember the wedding. You forget the balance was never collected. By the time you check, the guests have gone home and so has the money.</p>
+          </article>
+        </div>
+
+        <p class="pain__punch">
+          One clash. One forgotten balance. That is all it takes for a family to tell every relative
+          not to book you.
+        </p>
+      </div>
+    </section>
+
+    <!-- ===== 3. THE INSIGHT ===== -->
+    <section class="insight">
+      <div class="wrap insight__inner">
+        <p class="eyebrow eyebrow--paper">The wedge</p>
+        <p class="insight__big">
+          A double-booked date is not a scheduling error. It is the one mistake that ends a
+          vendor&rsquo;s name. <span class="u-mari">Catch the clash the moment the booking is written</span>
+          — and every rupee of advance and balance stays on the record, not in an argument.
+        </p>
+        <p class="insight__sig">— the whole point of MandapBook</p>
+      </div>
+    </section>
+
+    <!-- ===== 4. HOW IT WORKS ===== -->
+    <section class="section" id="how">
+      <div class="wrap">
+        <p class="eyebrow eyebrow--center">How it works</p>
+        <h2 class="section__title center">From enquiry to balance collected — in four steps.</h2>
+
+        <ol class="steps">
+          <li class="step">
+            <span class="step__n">1</span>
+            <div class="step__body">
+              <h3>Write the booking</h3>
+              <p>Enter the event, date, party size and total. Takes less time than a WhatsApp reply.</p>
+            </div>
+          </li>
+          <li class="step">
+            <span class="step__n">2</span>
+            <div class="step__body">
+              <h3>MandapBook checks the date</h3>
+              <p>The moment you save, it compares against every booking on that date and your daily capacity — and warns before a clash becomes a crisis.</p>
+            </div>
+          </li>
+          <li class="step">
+            <span class="step__n">3</span>
+            <div class="step__body">
+              <h3>Log the advance</h3>
+              <p>Record what the family paid. The balance is calculated for you and shown against the event, so there is never a "how much did I give" fight.</p>
+            </div>
+          </li>
+          <li class="step">
+            <span class="step__n">4</span>
+            <div class="step__body">
+              <h3>Reminders go out</h3>
+              <p>MandapBook queues a reminder for the balance due before the event, so you collect on time — not after everyone has left.</p>
+            </div>
+          </li>
+        </ol>
+      </div>
+    </section>
+
+    <!-- ===== 5. FEATURES ===== -->
+    <section class="section section--tint" id="features">
+      <div class="wrap">
+        <p class="eyebrow eyebrow--center">What you get</p>
+        <h2 class="section__title center">Six things that keep peak season from falling apart.</h2>
+
+        <div class="feat">
+          <article class="feat__card">
+            <h3><span class="feat__tag">Calendar</span>Date-collision detection</h3>
+            <p>Every date knows its bookings. Enter one too many and MandapBook stops you before you promise a date you cannot serve.</p>
+          </article>
+          <article class="feat__card">
+            <h3><span class="feat__tag">Capacity</span>Over-capacity warnings</h3>
+            <p>Set your daily capacity — say two events a day. When a date crosses it, you get a marigold warning, not a silent overbooking.</p>
+          </article>
+          <article class="feat__card">
+            <h3><span class="feat__tag">Money</span>Advance vs balance tracking</h3>
+            <p>Every booking shows total, advance received and balance to collect — in rupees, per event, with nothing to add up in your head.</p>
+          </article>
+          <article class="feat__card">
+            <h3><span class="feat__tag">Checklist</span>Per-event checklist</h3>
+            <p>Tent, generator, catering count, welcome gate — a ready checklist per event so nothing is forgotten on the loading day.</p>
+          </article>
+          <article class="feat__card">
+            <h3><span class="feat__tag">Reminders</span>Payment reminders</h3>
+            <p>Advance-due and balance-due-before-the-event reminders drop into your outbox, so collecting money stops being a thing you forget.</p>
+          </article>
+          <article class="feat__card">
+            <h3><span class="feat__tag">Dashboard</span>One-screen overview</h3>
+            <p>Upcoming events, any date conflicts, and total outstanding balance to collect — the three numbers that decide your month, in one place.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== 6. PRODUCT PREVIEW ===== -->
+    <section class="section" id="preview">
+      <div class="wrap">
+        <p class="eyebrow eyebrow--center">Inside MandapBook</p>
+        <h2 class="section__title center">The dashboard you open every morning of the season.</h2>
+
+        <div class="shot" role="img" aria-label="MandapBook dashboard preview showing upcoming events, a date conflict warning, and outstanding balance to collect">
+          <div class="shot__chrome">
+            <span class="shot__dots"><i></i><i></i><i></i></span>
+            <span class="shot__url">mandapbook.app / dashboard</span>
+          </div>
+
+          <div class="shot__body">
+            <!-- stat row -->
+            <div class="dash__stats">
+              <div class="stat">
+                <span class="stat__label">Upcoming events</span>
+                <span class="stat__num" data-target="14">14</span>
+                <span class="stat__sub">next 30 days</span>
+              </div>
+              <div class="stat stat--warn">
+                <span class="stat__label">Date conflicts</span>
+                <span class="stat__num" data-target="1">1</span>
+                <span class="stat__sub">needs action</span>
+              </div>
+              <div class="stat">
+                <span class="stat__label">Balance to collect</span>
+                <span class="stat__num" data-target="473500" data-prefix="Rs " data-rupee="1">Rs 4,73,500</span>
+                <span class="stat__sub">across 9 events</span>
+              </div>
+            </div>
+
+            <div class="dash__cols">
+              <!-- events table -->
+              <div class="dash__panel">
+                <h4 class="dash__h">Upcoming events</h4>
+                <div class="tablewrap">
+                  <table class="dtbl">
+                    <thead>
+                      <tr><th>Event</th><th>Date</th><th class="num">Total</th><th class="num">Balance</th></tr>
+                    </thead>
+                    <tbody>
+                      <tr>
+                        <td><span class="dtbl__ev">Sharma–Iyer Wedding</span><span class="dtbl__ar">Kothrud, Pune</span></td>
+                        <td>12 Dec</td>
+                        <td class="num">Rs 3,20,000</td>
+                        <td class="num due">Rs 1,80,000</td>
+                      </tr>
+                      <tr class="clash">
+                        <td><span class="dtbl__ev">Deshpande Reception</span><span class="dtbl__ar">Baner, Pune</span></td>
+                        <td>12 Dec <span class="chip chip--clash">clash</span></td>
+                        <td class="num">Rs 2,10,000</td>
+                        <td class="num due">Rs 1,05,000</td>
+                      </tr>
+                      <tr>
+                        <td><span class="dtbl__ev">Nair Engagement</span><span class="dtbl__ar">Viman Nagar</span></td>
+                        <td>18 Dec</td>
+                        <td class="num">Rs 1,45,000</td>
+                        <td class="num paid">Cleared</td>
+                      </tr>
+                      <tr>
+                        <td><span class="dtbl__ev">Patil Haldi</span><span class="dtbl__ar">Hadapsar</span></td>
+                        <td>21 Dec</td>
+                        <td class="num">Rs 88,500</td>
+                        <td class="num due">Rs 40,000</td>
+                      </tr>
+                      <tr>
+                        <td><span class="dtbl__ev">Ansari Walima</span><span class="dtbl__ar">Camp, Pune</span></td>
+                        <td>27 Dec</td>
+                        <td class="num">Rs 1,60,000</td>
+                        <td class="num due">Rs 96,000</td>
+                      </tr>
+                    </tbody>
+                  </table>
+                </div>
+              </div>
+
+              <!-- side: conflict + reminders -->
+              <div class="dash__side">
+                <div class="conflict">
+                  <span class="conflict__ic" aria-hidden="true">!</span>
+                  <div>
+                    <p class="conflict__t">Date conflict — 12 Dec</p>
+                    <p class="conflict__d">2 events booked, capacity is 2. Adding a 3rd would over-book. Confirm or move one.</p>
+                  </div>
+                </div>
+
+                <h4 class="dash__h dash__h--tight">Reminders in outbox</h4>
+                <ul class="rem">
+                  <li class="rem__row">
+                    <span class="rem__dot rem__dot--bal"></span>
+                    <span class="rem__txt"><strong>Balance due</strong> · Sharma–Iyer · Rs 1,80,000</span>
+                    <span class="rem__when">in 5 days</span>
+                  </li>
+                  <li class="rem__row">
+                    <span class="rem__dot rem__dot--adv"></span>
+                    <span class="rem__txt"><strong>Advance due</strong> · Joshi Sangeet · Rs 50,000</span>
+                    <span class="rem__when">tomorrow</span>
+                  </li>
+                  <li class="rem__row">
+                    <span class="rem__dot rem__dot--bal"></span>
+                    <span class="rem__txt"><strong>Balance due</strong> · Patil Haldi · Rs 40,000</span>
+                    <span class="rem__when">in 2 days</span>
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+        <p class="shot__cap">Sample data. Real names and Pune localities shown to make the point — your book, your clients.</p>
+      </div>
+    </section>
+
+    <!-- ===== 7. PRICING ===== -->
+    <section class="section section--ink" id="pricing">
+      <div class="wrap">
+        <p class="eyebrow eyebrow--center eyebrow--paper">Pricing</p>
+        <h2 class="section__title center invert">One price. Cheaper than one clash.</h2>
+
+        <div class="price">
+          <div class="price__card">
+            <p class="price__plan">MandapBook</p>
+            <p class="price__amt"><span class="price__cur">Rs</span>799<span class="price__per">/mo</span></p>
+            <p class="price__roi">One avoided double-booking pays for the next 10 years of the subscription.</p>
+            <ul class="price__list">
+              <li>Unlimited bookings &amp; events</li>
+              <li>Date-collision &amp; over-capacity alerts</li>
+              <li>Advance vs balance on every booking</li>
+              <li>Payment reminders to your outbox</li>
+              <li>Per-event checklists</li>
+              <li>Dashboard: events, conflicts, balance to collect</li>
+            </ul>
+            <a href="#top" class="btn btn--lg btn--block">Start 14-day free trial</a>
+            <p class="price__fine">No card to start. Cancel any time.</p>
+          </div>
+          <div class="price__aside">
+            <p class="price__math-h">The rough maths</p>
+            <p class="price__math">
+              A mid-size wedding booking is worth <strong>Rs 1–3 lakh</strong>. Lose one to a clash — or refund
+              it and eat the loss — and you have wiped out <strong>10&ndash;30 years</strong> of MandapBook.
+            </p>
+            <p class="price__math price__math--muted">
+              At Rs 799/mo, the software costs about <strong>Rs 26 a day</strong> — less than the chai
+              your team drinks during one site visit.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== 8. WHO IT'S FOR + FAQ ===== -->
+    <section class="section section--tint" id="faq">
+      <div class="wrap who__grid">
+        <div class="who">
+          <p class="eyebrow">Who it&rsquo;s for</p>
+          <h2 class="section__title">Built for the people who run the day.</h2>
+          <ul class="who__list">
+            <li><strong>Caterers</strong> — count-driven, date-critical, one clash ruins two events.</li>
+            <li><strong>Tent &amp; mandap houses</strong> — finite stock, one date can only go one place.</li>
+            <li><strong>Decorators</strong> — teams and trucks booked per date, per venue.</li>
+            <li><strong>Photographers</strong> — you are the resource; a clash means one couple has no album.</li>
+          </ul>
+        </div>
+
+        <div class="faq">
+          <p class="eyebrow">Questions</p>
+          <div class="faq__item">
+            <h3>Do I need to be good with computers?</h3>
+            <p>No. If you can send a WhatsApp message, you can write a booking in MandapBook. It runs in the browser on your phone — nothing to install.</p>
+          </div>
+          <div class="faq__item">
+            <h3>What if two bookings really are fine on one date?</h3>
+            <p>You set your daily capacity. MandapBook only warns when a date crosses it, and you can always confirm and go ahead. It advises — you decide.</p>
+          </div>
+          <div class="faq__item">
+            <h3>Will it send messages to my clients automatically?</h3>
+            <p>Reminders land in your outbox — advance due, balance due before the event — so you stay in control of what goes out and when. Nothing is sent behind your back.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- ===== 9. FOOTER ===== -->
+  <footer class="footer">
+    <div class="wrap footer__inner">
+      <div class="footer__brand">
+        <span class="brand__mark" aria-hidden="true">
+          <svg viewBox="0 0 40 40" width="24" height="24">
+            <path d="M6 17 L20 8 L34 17 Z" fill="currentColor"/>
+            <rect x="8.5" y="17" width="2.6" height="15" fill="currentColor"/>
+            <rect x="28.9" y="17" width="2.6" height="15" fill="currentColor"/>
+            <rect x="11" y="28" width="18" height="4" rx="1.5" fill="currentColor"/>
+          </svg>
+        </span>
+        <span class="brand__word">MandapBook</span>
+      </div>
+      <p class="footer__tag">No double-booked dates, ever.</p>
+      <p class="footer__contact">
+        <a href="mailto:sreeni.nintendo@gmail.com">sreeni.nintendo@gmail.com</a>
+      </p>
+      <p class="footer__studio">A <strong>KARYA</strong> studio build</p>
+    </div>
+  </footer>
+
+  <script src="app.js"></script>
+</body>
+</html>

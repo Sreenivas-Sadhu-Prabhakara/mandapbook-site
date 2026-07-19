@@ -1,0 +1,16 @@
+# macOS
+.DS_Store
+
+# editors
+.vscode/
+.idea/
+*.swp
+
+# logs / deps (none used, kept for hygiene)
+node_modules/
+npm-debug.log*
+*.log
+
+# local env
+.env
+.env.*
