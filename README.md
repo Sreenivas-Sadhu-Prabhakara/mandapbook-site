@@ -4,7 +4,7 @@ A standalone marketing / explainer page for **MandapBook**, booking software for
 wedding and event vendors (caterers, tent houses, decorators, photographers).
 
 > **No double-booked dates, ever.** Catch date collisions the moment a booking is
-> entered, and track advance vs balance for every event. **Rs 799/mo.**
+> entered, and track advance vs balance for every event. **Subscription — pricing on discovery.**
 
 This is **not** the product itself — it is a single-page site whose only job is to
 make the idea instantly clear to (a) a non-technical Indian SMB owner and

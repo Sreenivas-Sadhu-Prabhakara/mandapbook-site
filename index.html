@@ -1,22 +1,140 @@
 <!doctype html>
-<html lang="en">
+<html lang="en-IN">
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>MandapBook — No double-booked dates, ever.</title>
-  <meta name="description" content="Booking software for wedding and event vendors. Catch date collisions the moment a booking is entered, and track advance vs balance for every event. Rs 799/mo." />
+  <title>MandapBook — Stop double bookings for wedding vendors</title>
+  <meta name="description" content="Event booking software for caterers, tent houses, decorators and photographers: prevent double bookings and track every advance and balance across India. See how it works." />
+  <meta name="keywords" content="event booking software, wedding vendor management, catering booking app, double-booking prevention, event advance tracking India" />
+  <meta name="robots" content="index,follow,max-image-preview:large,max-snippet:-1" />
+  <link rel="canonical" href="https://sreenivas-sadhu-prabhakara.github.io/mandapbook-site/" />
+  <meta name="theme-color" content="#9F1239" />
+  <meta name="author" content="KARYA" />
+
+  <!-- Open Graph -->
+  <meta property="og:type" content="website" />
+  <meta property="og:site_name" content="KARYA" />
+  <meta property="og:locale" content="en_IN" />
+  <meta property="og:title" content="MandapBook — Stop double bookings for wedding vendors" />
+  <meta property="og:description" content="Event booking software for caterers, tent houses, decorators and photographers: prevent double bookings and track every advance and balance across India." />
+  <meta property="og:url" content="https://sreenivas-sadhu-prabhakara.github.io/mandapbook-site/" />
+  <meta property="og:image" content="https://sreenivas-sadhu-prabhakara.github.io/mandapbook-site/og.png" />
+  <meta property="og:image:width" content="1200" />
+  <meta property="og:image:height" content="630" />
+  <meta property="og:image:alt" content="MandapBook — no double-booked dates, ever. A KARYA studio build." />
+
+  <!-- Twitter -->
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="MandapBook — Stop double bookings for wedding vendors" />
+  <meta name="twitter:description" content="Event booking software for caterers, tent houses, decorators and photographers: prevent double bookings and track every advance and balance across India." />
+  <meta name="twitter:image" content="https://sreenivas-sadhu-prabhakara.github.io/mandapbook-site/og.png" />
+
   <link rel="icon" href="favicon.svg" type="image/svg+xml" />
+  <link rel="apple-touch-icon" href="https://sreenivas-sadhu-prabhakara.github.io/mandapbook-site/og.png" />
   <link rel="stylesheet" href="styles.css" />
+
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@graph": [
+      {
+        "@type": "Organization",
+        "name": "KARYA",
+        "url": "https://kaarya-bench.pages.dev/",
+        "email": "sreeni.nintendo@gmail.com"
+      },
+      {
+        "@type": "WebSite",
+        "url": "https://sreenivas-sadhu-prabhakara.github.io/mandapbook-site/",
+        "name": "MandapBook",
+        "inLanguage": "en-IN"
+      },
+      {
+        "@type": "SoftwareApplication",
+        "name": "MandapBook",
+        "applicationCategory": "BusinessApplication",
+        "operatingSystem": "Web",
+        "url": "https://sreenivas-sadhu-prabhakara.github.io/mandapbook-site/",
+        "image": "https://sreenivas-sadhu-prabhakara.github.io/mandapbook-site/og.png",
+        "description": "Event booking software for wedding and event vendors: prevent double bookings and track advance vs balance for every event.",
+        "inLanguage": ["en-IN", "hi-IN"],
+        "areaServed": { "@type": "Country", "name": "India" },
+        "audience": { "@type": "BusinessAudience" },
+        "provider": { "@type": "Organization", "name": "KARYA" },
+        "offers": {
+          "@type": "Offer",
+          "priceCurrency": "INR",
+          "availability": "https://schema.org/InStock",
+          "description": "Subscription — pricing shared on a discovery call"
+        }
+      },
+      {
+        "@type": "FAQPage",
+        "mainEntity": [
+          {
+            "@type": "Question",
+            "name": "Do I need to be good with computers?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "No. If you can send a WhatsApp message, you can write a booking in MandapBook. It runs in the browser on your phone — nothing to install."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "What if two bookings really are fine on one date?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "You set your daily capacity. MandapBook only warns when a date crosses it, and you can always confirm and go ahead. It advises — you decide."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "Will it send messages to my clients automatically?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Reminders land in your outbox — advance due, balance due before the event — so you stay in control of what goes out and when. Nothing is sent behind your back."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "What does MandapBook cost?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Pricing is worked out on a quick discovery call and billed monthly on subscription. We're keeping public prices off the page while we onboard our first users."
+            }
+          }
+        ]
+      },
+      {
+        "@type": "BreadcrumbList",
+        "itemListElement": [
+          {
+            "@type": "ListItem",
+            "position": 1,
+            "name": "KARYA On the Bench",
+            "item": "https://kaarya-bench.pages.dev/"
+          },
+          {
+            "@type": "ListItem",
+            "position": 2,
+            "name": "MandapBook",
+            "item": "https://sreenivas-sadhu-prabhakara.github.io/mandapbook-site/"
+          }
+        ]
+      }
+    ]
+  }
+  </script>
 </head>
 <body>
   <a class="skip-link" href="#main">Skip to content</a>
 
   <!-- ===== NAV ===== -->
-  <header class="nav" id="top">
+  <header class="nav" id="top" aria-label="Site header">
     <div class="wrap nav__inner">
       <a class="brand" href="#top" aria-label="MandapBook home">
         <span class="brand__mark" aria-hidden="true">
-          <svg viewBox="0 0 40 40" width="28" height="28">
+          <svg viewBox="0 0 40 40" width="28" height="28" role="img" aria-label="MandapBook logo"><title>MandapBook logo</title>
             <path d="M6 17 L20 8 L34 17 Z" fill="currentColor"/>
             <rect x="8.5" y="17" width="2.6" height="15" fill="currentColor"/>
             <rect x="28.9" y="17" width="2.6" height="15" fill="currentColor"/>
@@ -31,14 +149,14 @@
         <a href="#features">Features</a>
         <a href="#pricing">Pricing</a>
       </nav>
-      <a href="#pricing" class="btn btn--sm">Start free trial</a>
+      <a href="mailto:sreeni.nintendo@gmail.com?subject=Discovery%20call%20—%20MandapBook" class="btn btn--sm">Book a discovery call</a>
     </div>
   </header>
 
   <main id="main">
 
     <!-- ===== 1. HERO ===== -->
-    <section class="hero">
+    <section class="hero" aria-label="MandapBook overview">
       <div class="wrap hero__grid">
         <div class="hero__copy">
           <p class="eyebrow">Booking book for wedding &amp; event vendors</p>
@@ -49,10 +167,10 @@
             you write the booking down.
           </p>
           <div class="hero__cta">
-            <a href="#pricing" class="btn btn--lg">Start free trial</a>
+            <a href="mailto:sreeni.nintendo@gmail.com?subject=Discovery%20call%20—%20MandapBook" class="btn btn--lg">Book a discovery call</a>
             <a href="#how" class="btn btn--ghost btn--lg">See how it works</a>
           </div>
-          <p class="hero__note">Rs 799/mo · Works on the phone you already have · Hindi &amp; English</p>
+          <p class="hero__note">Works on the phone you already have · Hindi &amp; English · subscription · pricing on discovery</p>
         </div>
 
         <!-- Signature: live collision tile -->
@@ -92,7 +210,7 @@
     </section>
 
     <!-- ===== 2. THE PROBLEM ===== -->
-    <section class="section" id="problem">
+    <section class="section" id="problem" aria-label="The problem">
       <div class="wrap">
         <p class="eyebrow eyebrow--center">The nightmare</p>
         <h2 class="section__title center">Your booking system is a diary, a chat, and your memory.</h2>
@@ -133,7 +251,7 @@
     </section>
 
     <!-- ===== 3. THE INSIGHT ===== -->
-    <section class="insight">
+    <section class="insight" aria-label="Why it matters">
       <div class="wrap insight__inner">
         <p class="eyebrow eyebrow--paper">The wedge</p>
         <p class="insight__big">
@@ -146,7 +264,7 @@
     </section>
 
     <!-- ===== 4. HOW IT WORKS ===== -->
-    <section class="section" id="how">
+    <section class="section" id="how" aria-label="How it works">
       <div class="wrap">
         <p class="eyebrow eyebrow--center">How it works</p>
         <h2 class="section__title center">From enquiry to balance collected — in four steps.</h2>
@@ -185,7 +303,7 @@
     </section>
 
     <!-- ===== 5. FEATURES ===== -->
-    <section class="section section--tint" id="features">
+    <section class="section section--tint" id="features" aria-label="Features">
       <div class="wrap">
         <p class="eyebrow eyebrow--center">What you get</p>
         <h2 class="section__title center">Six things that keep peak season from falling apart.</h2>
@@ -220,7 +338,7 @@
     </section>
 
     <!-- ===== 6. PRODUCT PREVIEW ===== -->
-    <section class="section" id="preview">
+    <section class="section" id="preview" aria-label="Product preview">
       <div class="wrap">
         <p class="eyebrow eyebrow--center">Inside MandapBook</p>
         <h2 class="section__title center">The dashboard you open every morning of the season.</h2>
@@ -333,16 +451,16 @@
     </section>
 
     <!-- ===== 7. PRICING ===== -->
-    <section class="section section--ink" id="pricing">
+    <section class="section section--ink" id="pricing" aria-label="Pricing">
       <div class="wrap">
         <p class="eyebrow eyebrow--center eyebrow--paper">Pricing</p>
-        <h2 class="section__title center invert">One price. Cheaper than one clash.</h2>
+        <h2 class="section__title center invert">Pricing sized to your setup — cheaper than one clash.</h2>
 
         <div class="price">
           <div class="price__card">
             <p class="price__plan">MandapBook</p>
-            <p class="price__amt"><span class="price__cur">Rs</span>799<span class="price__per">/mo</span></p>
-            <p class="price__roi">One avoided double-booking pays for the next 10 years of the subscription.</p>
+            <p class="price__amt"><span class="price__cur">Pricing on</span>discovery<span class="price__per">Subscription basis</span></p>
+            <p class="price__roi">We set pricing on a short discovery call and bill it as a simple monthly subscription — sized to your setup. Early users get founder terms.</p>
             <ul class="price__list">
               <li>Unlimited bookings &amp; events</li>
               <li>Date-collision &amp; over-capacity alerts</li>
@@ -351,18 +469,18 @@
               <li>Per-event checklists</li>
               <li>Dashboard: events, conflicts, balance to collect</li>
             </ul>
-            <a href="#top" class="btn btn--lg btn--block">Start 14-day free trial</a>
-            <p class="price__fine">No card to start. Cancel any time.</p>
+            <a href="mailto:sreeni.nintendo@gmail.com?subject=Discovery%20call%20—%20MandapBook" class="btn btn--lg btn--block">Book a discovery call</a>
+            <p class="price__fine">A quick call, no obligation. Founder terms for early users.</p>
           </div>
           <div class="price__aside">
             <p class="price__math-h">The rough maths</p>
             <p class="price__math">
               A mid-size wedding booking is worth <strong>Rs 1–3 lakh</strong>. Lose one to a clash — or refund
-              it and eat the loss — and you have wiped out <strong>10&ndash;30 years</strong> of MandapBook.
+              it and eat the loss — and you have wiped out <strong>years</strong> of a subscription many times over.
             </p>
             <p class="price__math price__math--muted">
-              At Rs 799/mo, the software costs about <strong>Rs 26 a day</strong> — less than the chai
-              your team drinks during one site visit.
+              The maths always works out the same way: the software costs a fraction of a single site visit,
+              and one clash it prevents pays for it many times over.
             </p>
           </div>
         </div>
@@ -370,7 +488,7 @@
     </section>
 
     <!-- ===== 8. WHO IT'S FOR + FAQ ===== -->
-    <section class="section section--tint" id="faq">
+    <section class="section section--tint" id="faq" aria-label="Who it's for and frequently asked questions">
       <div class="wrap who__grid">
         <div class="who">
           <p class="eyebrow">Who it&rsquo;s for</p>
@@ -397,17 +515,21 @@
             <h3>Will it send messages to my clients automatically?</h3>
             <p>Reminders land in your outbox — advance due, balance due before the event — so you stay in control of what goes out and when. Nothing is sent behind your back.</p>
           </div>
+          <div class="faq__item">
+            <h3>What does MandapBook cost?</h3>
+            <p>Pricing is worked out on a quick discovery call and billed monthly on subscription. We're keeping public prices off the page while we onboard our first users.</p>
+          </div>
         </div>
       </div>
     </section>
   </main>
 
   <!-- ===== 9. FOOTER ===== -->
-  <footer class="footer">
+  <footer class="footer" aria-label="Site footer">
     <div class="wrap footer__inner">
       <div class="footer__brand">
         <span class="brand__mark" aria-hidden="true">
-          <svg viewBox="0 0 40 40" width="24" height="24">
+          <svg viewBox="0 0 40 40" width="24" height="24" role="img" aria-label="MandapBook logo"><title>MandapBook logo</title>
             <path d="M6 17 L20 8 L34 17 Z" fill="currentColor"/>
             <rect x="8.5" y="17" width="2.6" height="15" fill="currentColor"/>
             <rect x="28.9" y="17" width="2.6" height="15" fill="currentColor"/>
